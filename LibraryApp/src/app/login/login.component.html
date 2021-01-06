@@ -1,0 +1,22 @@
+<body class="login">
+    <h1 class="display-4 text-center py-3">Library Management System</h1>
+    
+        
+        <div class="col-md-6 "   >
+            <form novalidate #form="ngForm" (submit)="onSubmit(form)">
+                <div class="form-group1">
+                    <label>User Name</label>
+                           <input  class="form-control form-contol-lg" placeholder="User Name" name="userName" #userName="ngModel" [(ngModel)]="service.userName" required>
+                </div>
+                <hr>
+                <div class="form-group1">
+                    <label>Password</label>
+                           <input  type = "password" class="form-control form-contol-lg" placeholder="Password" name="password" #password="ngModel" [(ngModel)]="service.password" required>
+                </div>
+                <hr>
+                <div class="form-group">
+                           <button class="btn" type="submit" style="margin:5px 100px" [disabled]="form.invalid">Login</button>
+                </div>
+            </form>
+        </div>
+        </body>

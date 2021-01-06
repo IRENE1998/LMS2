@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+.form-group1 label{
+    font-weight: bold;
+    color:#4386e6;
+}
+
+.form-group input{
+    color: black;
+    font-weight: 500;
+}
+.form-group input::placeholder{
+    color:#c0bdbd;
+    font-weight: 300;
+}
+thead th{
+    color: black;
+    font-style:oblique;
+    font-weight: 300;
+}
+table tbody tr:hover{
+    background-color:#acd7dd;
+}
+input.invalid{
+    border-color: red;
+    border-width:initial;
+}
+
+.modal.show{
+    display:block ;
+}
+
+.col-md-6{
+    position: fixed;
+    float: center;
+    margin: 110px 1010px;
+    width: 300px;
+    
+}
+.login{
+    height:40em; background-size:cover ; width:auto;
+    background-image:url('/assets/image/ww.jpg');
+   background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+   
+}
+    
+ 
+  .book{
+    height:40em; background-size:right; width:auto;
+   
+    background-position:right;
+    background-repeat: no-repeat;
+  }
+
+    body{
+        background-color:#dff1f3;
+        
+    }
+button[type=submit].btn{
+    color:white;
+    background-color:#132565;
+    border-radius: 12px;
+}
+button[type=button].btn2{
+    color: rgb(49, 41, 41);
+    background-color: #6bafba;
+    padding: 10px 15px;
+    border-radius: 12px;
+    float: right;
+    border: rgb(58, 171, 175);
+}
+button[type=button].btnn{
+    color: white;
+    background-color:#10206b9a ;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: #10206b9a ;
+    margin: 0.001px 20px;
+    float: right;
+    
+}
+
+
+
+div.modal-footer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;  
+}
+.btn3{
+    position: absolute;
+    background-color: #6bafba;
+    border: ivory;
+    width: 100px;
+    top: 0;
+    right: 0;
+}
+
+.btn5{
+    color:white;
+    background-color:#132565d2;
+   
+    border-radius: 12px;
+    width: 100px;
+
+}
+.btn6{
+    color:white;
+    background-color:#132565d2;
+    border-radius: 12px;
+    width: 100px;
+
+}

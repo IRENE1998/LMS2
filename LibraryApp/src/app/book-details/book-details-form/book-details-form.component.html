@@ -1,0 +1,56 @@
+<form novalidate autocomplete="off" #form="ngForm"(submit)="onSubmit(form)"> 
+    <input type="hidden" name="bookId"
+    [value]="service.formData.bookId"/>
+    <div class="form-group">
+       <label >BOOK NAME</label>
+       <input class="form-control form-control-lg" placeholder="Enter Book Name"
+       name="bookName" #bookName="ngModel"[(ngModel)]="service.formData.bookName"
+       required [class.invalid]="bookName.invalid && bookName.touched">
+    </div>
+    <div class="form-group">
+        <label >ISBN</label>
+        <input class="form-control form-control-lg"  placeholder="Enter 13 digit ISBN number"
+        name="isbn" #isbn="ngModel"[(ngModel)]="service.formData.isbn"
+        required [class.invalid]="isbn.invalid && isbn.touched"maxlength="13" minlength="13">
+     </div>
+     <div class="form-group">
+        <label >AUTHOR</label>
+        <input class="form-control form-control-lg" placeholder="Enter Author Name"
+        name="author" #author="ngModel"[(ngModel)]="service.formData.author"
+        required [class.invalid]="author.invalid && author.touched" >
+     </div>
+     <div class="form-group">
+      <label>CATEGORY</label>
+      <select name="category"  id="Category" class="form-control form-control-lg" style="font-weight:300 " style="color:#c0bdbd"    required 
+       #category="ngModel" [(ngModel)]="service.formData.category"
+      required [class.invalid]="category.invalid && category.touched">
+      <option style="font-weight:300" value="" disabled selected>Choose Category</option>
+      <option style="font-weight:300" value="Academic">Academic</option>
+      <option style="font-weight:300" value="Action & Adventure">Action & Adventure</option>
+      <option style="font-weight:300" value="Biographies">Biographies</option>
+      <option style="font-weight:300" value="Children's Books">Children's Books</option>
+      <option style="font-weight:300" value="Crime, Thriller and Mystery">Crime, Thriller and Mystery</option>
+      <option style="font-weight:300" value="Fiction and Fantasy">Fiction and Fantasy</option>
+      <option style="font-weight:300" value="History and Politics">History and Politics  </option>
+      <option style="font-weight:300" value="Literature">Literature</option>
+      <option style="font-weight:300" value="Science & Technology">Science & Technology</option>
+      <option style="font-weight:300" value="Others">Others</option>
+      </select>
+  </div>
+     <div class="form-group">
+        <label >PUBLISHER</label>
+        <input class="form-control form-control-lg" placeholder="Enter Publisher Name"
+        name="publisher" #publisher="ngModel"[(ngModel)]="service.formData.publisher"
+        required [class.invalid]="publisher.invalid && publisher.touched">
+     </div>    
+
+     <div class="form-group12">
+      <div class="text-center">   
+          <button class="btn5" type ="submit"  [disabled]="form.invalid">Add</button>
+          <button class="btn6" type ="reset" value="Reset"  >Cancel</button>
+      </div>
+  </div>
+
+   
+
+</form>

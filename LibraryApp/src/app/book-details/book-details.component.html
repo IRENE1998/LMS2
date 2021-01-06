@@ -1,0 +1,79 @@
+<div class="book">
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center ">BOOK DETAILS </h1>
+    
+    </div>
+    <div class="row">
+      
+        <div class="col-md-12">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Book Name</th>
+                        <th>ISBN</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Publisher</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input class="form-control input-sm" [(ngModel)]="searchInput1"  (keyup)="search1()" placeholder="Search"></td>
+                        <td><input class="form-control input-sm" [(ngModel)]="searchInput2"  (keyup)="search2()" placeholder="Search"></td>
+                        <td><input class="form-control input-sm" [(ngModel)]="searchInput3"  (keyup)="search3()" placeholder="Search"></td>
+                        <td><input class="form-control input-sm" [(ngModel)]="searchInput4"  (keyup)="search4()" placeholder="Search"></td>
+                        <td><input class="form-control input-sm" [(ngModel)]="searchInput5"  (keyup)="search5()" placeholder="Search"></td>
+
+                
+                    </tr>
+                <tr *ngFor="let bd of service.list">
+                    <td (click)="populateForm(bd)">{{bd.bookName}}</td>
+                    <td (click)="populateForm(bd)">{{bd.isbn}}</td>
+                    <td (click)="populateForm(bd)">{{bd.author}}</td>
+                    <td (click)="populateForm(bd)">{{bd.category}}</td>
+                    <td (click)="populateForm(bd)">{{bd.publisher}}</td>
+                    <td>
+
+                        <i (click)="populateForm(bd); showModal=true" class="fas fa-edit fa-lg" id="editIcon"></i>
+                        <i class ="far fa-trash-alt fa-lg text danger"  (click)="onDelete(bd.bookId)"></i>
+                        
+                    </td>
+                </tr>
+    
+                </tbody>
+            </table>
+        <div class="app-logout">
+          <button class="btn3" type="button"(click)="onLogout()">Logout</button>
+        </div>
+        
+      <!-- Trigger the modal with a button -->
+<button type="button" class="btn2" data-toggle="modal" data-target="#myModal" (click)="showModal=true">Add Book</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal" role="dialog" [ngClass]="{'show':showModal}">
+
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="jumbotron py-3">
+            <h1 class="diaplay-4 text-center">Enter Book Details</h1>
+        </div>
+        
+      </div>
+      <div class="modal-body">
+         
+        <app-book-details-form></app-book-details-form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button2"  (click)="showModal=false">x</button>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+        </div>
